@@ -1,0 +1,54 @@
+/* Centra el bloque "Sobre mí" y limita el ancho */
+.about__header {
+  max-width: 760px;
+}
+
+/* En desktop lo centramos visualmente */
+@media (min-width: 900px) {
+  .about__header {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .about__header .section__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Cards más compactas */
+.about__grid {
+  margin-top: 22px;
+  display: grid;
+  gap: 14px;
+}
+
+/* En desktop: en vez de ocupar TODO el ancho, lo limitamos */
+@media (min-width: 900px) {
+  .about__grid {
+    grid-template-columns: 1fr 1fr;
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.about__card {
+  padding: 14px;              /* antes 16, más compacto */
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.04);
+}
+
+.about__card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.about__card ul {
+  margin: 0;
+  padding-left: 18px;
+  opacity: 0.88;
+  line-height: 1.75;
+}

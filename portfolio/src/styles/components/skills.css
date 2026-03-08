@@ -1,0 +1,122 @@
+/* =========================
+   SKILLS
+   ========================= */
+
+.skills {
+  padding-top: 40px;
+  padding-bottom: 90px;
+}
+
+.skills__header {
+  max-width: 760px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+.skills__header .section__subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skills__grid {
+  margin-top: 22px;
+  display: grid;
+  gap: 18px;
+}
+
+@media (min-width: 900px) {
+  .skills__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.skills__card {
+  min-height: 220px;
+  padding: 22px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  transition:
+    transform 0.24s ease,
+    border-color 0.24s ease,
+    background 0.24s ease,
+    box-shadow 0.24s ease;
+}
+
+.skills__card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.22);
+}
+
+.skills__card h3 {
+  margin: 0 0 18px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+}
+
+.skills__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skills__chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 14px;
+  font-size: 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.92);
+  transition:
+    transform 0.18s ease,
+    background 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease;
+  cursor: default;
+}
+
+.skills__chip:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+
+@media (max-width: 899px) {
+  .skills__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .skills {
+    padding-bottom: 70px;
+  }
+
+  .skills__card {
+    min-height: auto;
+    padding: 18px;
+    border-radius: 18px;
+  }
+
+  .skills__card h3 {
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .skills__chip {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
